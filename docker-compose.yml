@@ -1,0 +1,10 @@
+---
+version: '2'
+services:
+  films-websocket:
+    image: springcommunity/films-websocket-service
+    container_name: films-websocket-service
+    mem_limit: 512M
+    entrypoint: ["./dockerize","--","java", "org.springframework.boot.loader.JarLauncher"]
+    ports:
+      - 8080:8080
