@@ -5,11 +5,11 @@
     <parent>
         <groupId>com.films.mycompany</groupId>
         <artifactId>films-microservices</artifactId>
-        <version>1.0</version>
+        <version>0.2.0</version>
     </parent>
     <groupId>com.films.websocket</groupId>
     <artifactId>films-websocket-service</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
     <description>Films websocket implementation</description>
     <properties>
