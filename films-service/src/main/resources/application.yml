@@ -1,0 +1,27 @@
+spring.profiles.active: dev
+
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.ogm.datastore.mongodb.MongoDBDialect
+  data:
+    mongodb:
+      database: films
+      host: localhost
+      port: 27017
+---
+spring:
+  profiles: docker
+  data:
+    mongodb:
+      host: mongodb_container
+

@@ -1,6 +1,17 @@
 ---
 version: '2'
 services:
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGDB_DATABASE:  films
+    #      MONGODB_USER: root
+    #      MONGODB_PASSWORD: password
+    #      MONGODB_ADMIN_PASSWORD: password
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
   films-websocket:
     image: springcommunity/films-websocket-service
     container_name: films-websocket-service
@@ -8,3 +19,14 @@ services:
     entrypoint: ["./dockerize","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
       - 8080:8080
+  films-service:
+    image: springcommunity/films-service
+    container_name: films-service
+    mem_limit: 512M
+    depends_on:
+      - mongodb_container
+    entrypoint: ["./dockerize","-wait=tcp://mongodb_container:27017","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
+    ports:
+      - 8081:8080
+volumes:
+  mongodb_data_container:

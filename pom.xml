@@ -17,7 +17,7 @@
 
     <modules>
         <module>films-websocket-service</module>
-        <!--<module>films-service</module>-->
+        <module>films-service</module>
     </modules>
 
     <properties>
@@ -50,11 +50,11 @@
                 <version>${spring-boot.version}</version>
                 <scope>test</scope>
                 <exclusions>
-			        <exclusion>
-			            <groupId>org.junit.vintage</groupId>
-			            <artifactId>junit-vintage-engine</artifactId>
-			        </exclusion>
-			    </exclusions>
+                    <exclusion>
+                        <groupId>org.junit.vintage</groupId>
+                        <artifactId>junit-vintage-engine</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
