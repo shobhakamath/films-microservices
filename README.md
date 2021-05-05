@@ -70,9 +70,11 @@ user
 >
 
 
-Docker snapshot:
+**Docker snapshot**:
+![image](https://user-images.githubusercontent.com/7194495/117145991-ca0d5a00-adc4-11eb-9ce3-0695344ee560.png)
 
-![image](https://user-images.githubusercontent.com/7194495/117145394-2b80f900-adc4-11eb-9423-fd8787746ef0.png)
+**Swagger snapshot**
+![image](https://user-images.githubusercontent.com/7194495/117146105-ea3d1900-adc4-11eb-96b8-c1c64981b52c.png)
 
 
 **Enhancements for future expected:**
