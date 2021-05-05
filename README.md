@@ -70,7 +70,9 @@ user
 >
 
 
-Enhancements:
+**Enhancements for future expected:**
 
 Using Kafka topics setup
+
 Using Redis foc caching the comments
+
