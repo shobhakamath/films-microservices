@@ -69,3 +69,8 @@ user
 { "_id" : "S4424891", "password" : "$2a$10$LKT61LTQDFFQ9JO7QxqvSOSDhbM4HvUP2Wrh49ndZKju77sxOz54e", "name" : "superuser", "email" : "shobha.s.kamath@gmail.com", "roles" : [ ], "_class" : "com.cinema.authentication.domain.model.User" }
 >
 
+
+Enhancements:
+
+Using Kafka topics setup
+Using Redis foc caching the comments
