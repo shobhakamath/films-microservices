@@ -1,11 +1,19 @@
 ---
 version: '2'
 services:
+  config-server:
+    image: springcommunity/films-config-server
+    container_name: films-config-server
+    mem_limit: 512M
+    ports:
+      - 8888:8888
   discovery-server:
     image: springcommunity/films-discovery-server
-    container_name: discovery-server
+    container_name: films-discovery-server
     mem_limit: 512M
-    entrypoint: ["./dockerize","--","java", "org.springframework.boot.loader.JarLauncher"]
+    depends_on:
+      - config-server
+    entrypoint: ["./dockerize","-wait=tcp://config-server:8888","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
       - 8761:8761
   mongodb_container:
@@ -23,6 +31,8 @@ services:
     image: springcommunity/films-websocket-service
     container_name: films-websocket-service
     mem_limit: 512M
+    depends_on:
+      - discovery-server
     entrypoint: ["./dockerize","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
       - 8080:8080
@@ -40,5 +50,7 @@ services:
     build: ./mongo-seed
     links:
       - mongodb_container
+      - films-websocket
+      - films-service
 volumes:
   mongodb_data_container:
