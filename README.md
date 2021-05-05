@@ -70,6 +70,11 @@ user
 >
 
 
+Docker snapshot:
+
+![image](https://user-images.githubusercontent.com/7194495/117145394-2b80f900-adc4-11eb-9423-fd8787746ef0.png)
+
+
 **Enhancements for future expected:**
 
 Using Kafka topics setup
