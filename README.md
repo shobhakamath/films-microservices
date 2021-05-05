@@ -12,16 +12,27 @@ Flip the browser and the comments are seen in both the screens
 
 
 **Technologies used:**
+
 Java 11
+
 Springboot 2.4.2
+
 Thymeleaf for UI
+
 Spring Security
+
 MongoDB for database
+
 websocket api- stomp
+
 docker-compose for containerization
-GIT workflow included
+
+GIT workflow included for CICD
+
 mongoimport for mongo seeding
+
 Swaggger UI for API contracts documentation
+
 
 
 
@@ -81,5 +92,5 @@ user
 
 Using Kafka topics setup
 
-Using Redis foc caching the comments
+Using Redis for caching the comments
 
