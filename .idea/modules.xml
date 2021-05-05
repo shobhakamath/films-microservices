@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/films-microservices.iml" filepath="$PROJECT_DIR$/films-microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/films-service/films-service.iml" filepath="$PROJECT_DIR$/films-service/films-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/films-websocket-service/films-websocket-service.iml" filepath="$PROJECT_DIR$/films-websocket-service/films-websocket-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/films-config-server/spring-petclinic-config-server.iml" filepath="$PROJECT_DIR$/films-config-server/spring-petclinic-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/films-discovery-server/spring-petclinic-discovery-server.iml" filepath="$PROJECT_DIR$/films-discovery-server/spring-petclinic-discovery-server.iml" />
+    </modules>
+  </component>
+</project>

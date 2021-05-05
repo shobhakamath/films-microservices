@@ -33,7 +33,9 @@
             <select>
                 <option th:each="rating : ${T(com.films.model.Rating).values()}"
                         th:value="${rating}"
-                        th:text="${rating}" id="rating">
+                        th:text="${rating}"
+                        th:field="*{rating}" class="form-control"
+                        id="rating">
                 </option>
             </select>
             <label th:style="'color:red'" th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}"></label>
@@ -53,10 +55,12 @@
             <select>
                 <option th:each="genre : ${T(com.films.model.Genre).values()}"
                         th:value="${genre}"
-                        th:text="${genre}" id="genre">
+                        th:text="${genre}"
+                        th:field="*{genre}" class="form-control"
+                        id="genre">
                 </option>
             </select>
-            <label th:style="'color:red'" th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}"></label>
+            <label th:style="'color:red'" th:if="${#fields.hasErrors('genre')}" th:errors="*{rating}"></label>
         </div>
         <a th:href="@{/films-ui}">
             <button type="button" class="btn btn-danger">Cancel</button>

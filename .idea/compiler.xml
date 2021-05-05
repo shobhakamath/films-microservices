@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="films-service" />
+        <module name="films-websocket-service" />
+        <module name="spring-petclinic-config-server" />
+        <module name="spring-petclinic-discovery-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="films-config-server" target="11" />
+      <module name="films-discovery-server" target="11" />
+      <module name="films-microservices" target="11" />
+      <module name="films-service" target="11" />
+      <module name="films-users-service" target="11" />
+      <module name="films-websocket-service" target="11" />
+      <module name="spring-petclinic-config-server" target="11" />
+      <module name="spring-petclinic-discovery-server" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="films-config-server" options="-parameters" />
+      <module name="films-discovery-server" options="-parameters" />
+      <module name="films-service" options="-parameters" />
+      <module name="films-users-service" options="-parameters" />
+      <module name="films-websocket-service" options="-parameters" />
+      <module name="spring-petclinic-config-server" options="-parameters" />
+      <module name="spring-petclinic-discovery-server" options="-parameters" />
+    </option>
+  </component>
+</project>

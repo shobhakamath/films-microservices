@@ -8,61 +8,59 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 </head>
 <body>
-<div  layout:fragment="content">
+<div layout:fragment="content">
     <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1> Films </h1>
-            <ul>
-                <li sec:authorize="isAnonymous()"><a class="nav-link" href="/login">Login</a></li>
-                <li sec:authorize= "hasAnyRole('ADMIN')">><a class="nav-link" href="/logout">Logout</a></li>
-                <li sec:authorize="isAuthenticated()">Wellcome, <span sec:authentication="name"></span></li>
-            </ul>
+        <div class="row">
+            <div class="col-md-12">
+                <h1> Films </h1>
+            </div>
         </div>
-    </div>
-    <a th:href="@{/edit-add-film}">
-        <button type="button" class="btn btn-success">Add Film</button>
-    </a>
-    <div class="row">
-        <div class="col-md-6">
-            <table class="table">
-                <thead>
-                <tr>
-                    <!--
-                     <th>Id</th>
-                    -->
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Release Date</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:if="${films.empty}">
-                    <td colspan="2"> No Films Available</td>
-                </tr>
-                <tr th:each="film : ${films}">
-                    <!--
-                    -->
-                    <td><span th:text="${film.name}"> Name </span></td>
-                    <td><span th:text="${film.description}"> Description </span></td>
-                    <td><span th:text="${#temporals.format(film.releaseDate, 'dd-MM-yyyy HH:mm')}"> Release Date </span></td>
-                    <td>
-                        <a sec:authorize="isAuthenticated()" access="hasAnyRole('ADMIN')" th:href="@{/delete-film/{id}(id=${film.id})}">
-                            <button type="button" class="btn btn-danger">Delete</button>
-                        </a>
-                        <a th:href="@{/edit-add-film/{id}(id=${film.id})}">
-                            <button type="button" class="btn btn-primary">Edit</button>
-                        </a>
-
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+        <a th:href="@{/edit-add-film}">
+            <button type="button" class="btn btn-success">Add Film</button>
+        </a>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <!--
+                         <th>Id</th>
+                        -->
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Release Date</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:if="${films.empty}">
+                        <td colspan="2"> No Films Available</td>
+                    </tr>
+                    <tr th:each="film : ${films}">
+                        <!--
+                        -->
+                        <td><span th:text="${film.name}"> Name </span></td>
+                        <td><span th:text="${film.description}"> Description </span></td>
+                        <td><span th:text="${#temporals.format(film.releaseDate, 'dd-MM-yyyy HH:mm')}"> Release Date </span></td>
+                        <td>
+                            <a sec:authorize="isAuthenticated()" access="hasAnyRole('ADMIN')" th:href="@{/delete-film/{id}(id=${film.id})}">
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </a>
+                            <a th:href="@{/edit-add-film/{id}(id=${film.id})}">
+                                <button type="button" class="btn btn-primary">Edit</button>
+                            </a>
+                            <a th:href="@{/review/{id}(id=${film.id})}">
+                                <button type="button" class="btn btn-primary">Comment</button>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
     </div>
 </div>
+
 
 </body>
 </html>

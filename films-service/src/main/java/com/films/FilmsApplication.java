@@ -22,7 +22,7 @@ public class FilmsApplication {
         SpringApplication.run(FilmsApplication.class, args);
     }
 
-@Bean
+    @Bean
     public CommandLineRunner dbSeeder(FilmService filmService, UserService userService) {
         return (args) -> {
             log.info("Generating sample data");
@@ -37,7 +37,7 @@ public class FilmsApplication {
             filmService.getAllFilms().forEach(reservation ->
                 log.info("Film --> " + reservation.getName() + " ID: " + reservation.getId()));
 
-            userService.createUser(new User("admin","admin","admin","admin@email.com", Role.ROLE_ADMIN));
+            userService.createUser(new User("admin", "admin", "admin", "admin@email.com", Role.ROLE_ADMIN));
 
         };
     }

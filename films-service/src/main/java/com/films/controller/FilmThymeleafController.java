@@ -59,10 +59,11 @@ public class FilmThymeleafController {
         return "redirect:films-ui";
     }
 
-    @RequestMapping("/films/{filmId}")
-    public ModelAndView join(@PathVariable String filmId, Principal principal) {
-        ModelAndView modelAndView = new ModelAndView("chatroom");
-        modelAndView.addObject("chatRoom", filmService.findFilmById(filmId));
-        return modelAndView;
+    @RequestMapping("/review/{filmId}")
+    public String join(@PathVariable String filmId, Principal principal) {
+        ModelAndView modelAndView = new ModelAndView("review");
+        modelAndView.addObject("film", filmService.findFilmById(filmId));
+        modelAndView.addObject("user",principal.getName());
+        return "redirect:http://localhost:8080";
     }
 }
