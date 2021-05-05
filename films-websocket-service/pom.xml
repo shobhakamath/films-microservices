@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.films.mycompany</groupId>
         <artifactId>films-microservices</artifactId>
-        <version>0.3.0</version>
+        <version>0.4.0</version>
     </parent>
     <groupId>com.films.websocket</groupId>
     <artifactId>films-websocket-service</artifactId>
