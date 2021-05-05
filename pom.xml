@@ -11,7 +11,7 @@
 
     <groupId>com.films.mycompany</groupId>
     <artifactId>films-microservices</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 

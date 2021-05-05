@@ -1,0 +1,5 @@
+spring:
+  profiles: docker
+  data:
+    mongodb:
+      host: mongodb_container

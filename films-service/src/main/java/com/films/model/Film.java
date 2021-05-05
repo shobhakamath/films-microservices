@@ -15,7 +15,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.validation.annotation.Validated;
 
 @Data
-@Document(collection = "reservations")
+@Document(collection = "films")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

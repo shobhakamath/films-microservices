@@ -28,5 +28,9 @@ services:
     entrypoint: ["./dockerize","-wait=tcp://mongodb_container:27017","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
       - 8081:8080
+  mongo_seed:
+    build: ./mongo-seed
+    links:
+      - mongodb_container
 volumes:
   mongodb_data_container:
