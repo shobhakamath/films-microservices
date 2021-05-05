@@ -18,7 +18,6 @@
     <modules>
         <module>films-websocket-service</module>
         <module>films-service</module>
-        <module>films-discovery-server</module>
     </modules>
 
     <properties>
