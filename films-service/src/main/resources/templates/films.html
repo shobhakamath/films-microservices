@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorator="layout/default">
 <head>
     <title>Films</title>
@@ -15,8 +15,8 @@
             <h1> Films </h1>
             <ul>
                 <li sec:authorize="isAnonymous()"><a class="nav-link" href="/login">Login</a></li>
-                <li sec:authorize="isAuthenticated()" access="hasAnyRole('ADMIN')">><a class="nav-link" href="/logout">Logout</a></li>
-                <li sec:authorize="isAuthenticated()">Wellcome, <span sec:authentication="username"></span></li>
+                <li sec:authorize= "hasAnyRole('ADMIN')">><a class="nav-link" href="/logout">Logout</a></li>
+                <li sec:authorize="isAuthenticated()">Wellcome, <span sec:authentication="name"></span></li>
             </ul>
         </div>
     </div>

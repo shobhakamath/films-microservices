@@ -5,10 +5,10 @@
     <parent>
         <groupId>com.films.mycompany</groupId>
         <artifactId>films-microservices</artifactId>
-        <version>0.3.0</version>
+        <version>0.4.0</version>
     </parent>
     <artifactId>films-service</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.1</version>
     <description>Microservice for films</description>
 
     <properties>

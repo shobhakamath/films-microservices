@@ -11,13 +11,14 @@
 
     <groupId>com.films.mycompany</groupId>
     <artifactId>films-microservices</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
 
     <modules>
         <module>films-websocket-service</module>
         <module>films-service</module>
+        <module>films-discovery-server</module>
     </modules>
 
     <properties>
